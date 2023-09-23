@@ -204,7 +204,9 @@ namespace SagitarioRHDesktop
                         table.AddCell(new Cell().Add(new Paragraph("INSS")));
 
                         table.AddCell(new Cell().Add(new Paragraph($"{folhaPgto.funcao}")));
-                        table.AddCell(new Cell().Add(new Paragraph($"{folhaPgto.valor}")));
+                        table.AddCell(new Cell().Add(new Paragraph($"{folhaPgto.valor}"))); 
+
+                        table.SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT);
 
 
 
