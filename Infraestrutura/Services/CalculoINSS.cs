@@ -76,7 +76,9 @@ namespace SagitarioRHDesktop.Infraestrutura.Services
                         folhaPagamento.idempresa = item.idempresa;
                         folhaPagamento.codevento = eventosModel.codevento;
                         folhaPagamento.datapgto = DateTime.Now;
+                        folhaPagamento.setor = item.setor;
                         context.folhaPgto.Add(folhaPagamento);
+
                     }
                 }
 
