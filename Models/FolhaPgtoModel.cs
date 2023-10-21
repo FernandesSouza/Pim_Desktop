@@ -16,6 +16,7 @@ namespace SagitarioRH.Models
         public decimal? valor { get; set; }
         public string? nome { get; set; }
         public string? funcao { get; set; }
+        public string? setor { get; set; }
         
        
     }

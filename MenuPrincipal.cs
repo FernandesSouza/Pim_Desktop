@@ -46,5 +46,14 @@ namespace SagitarioRHDesktop
             folhaPagamento.Show();
             this.Hide();
         }
+
+        private void admitirFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                AdmitirFuncionario admitirFuncionario = new AdmitirFuncionario();
+
+                admitirFuncionario.Show();
+                this.Hide();
+            
+        }
     }
 }
