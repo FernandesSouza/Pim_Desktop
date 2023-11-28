@@ -17,8 +17,10 @@ namespace SagitarioRH.Models
         public string? nome { get; set; }
         public string? funcao { get; set; }
         public string? setor { get; set; }
-        
-       
+
+        public  string? cpf { get; set; }
+
+
     }
 
 }

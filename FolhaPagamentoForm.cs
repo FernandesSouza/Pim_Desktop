@@ -195,16 +195,16 @@ namespace SagitarioRHDesktop
 
                         Table table = new Table(3);
 
-                      
+
 
                         table.AddCell(new Cell().Add(new Paragraph("Tipo de desconto\n\n\n\n\n\n\n")));
-                        table.AddCell(new Cell().Add(new Paragraph("Cargo\n\n\n\n\n\n\n"))); 
+                        table.AddCell(new Cell().Add(new Paragraph("Cargo\n\n\n\n\n\n\n")));
                         table.AddCell(new Cell().Add(new Paragraph("Salario\n\n\n\n\n\n\n")));
 
                         table.AddCell(new Cell().Add(new Paragraph("INSS")));
 
                         table.AddCell(new Cell().Add(new Paragraph($"{folhaPgto.funcao}")));
-                        table.AddCell(new Cell().Add(new Paragraph($"{folhaPgto.valor}"))); 
+                        table.AddCell(new Cell().Add(new Paragraph($"{folhaPgto.valor}")));
 
                         table.SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT);
 
@@ -217,7 +217,7 @@ namespace SagitarioRHDesktop
                         document.Add(table);
 
                         document.Close();
-                       
+
 
 
 
@@ -236,6 +236,28 @@ namespace SagitarioRHDesktop
 
 
 
+        }
+
+        private void cadastroDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroGerenteEmpresasForm gerente = new CadastroGerenteEmpresasForm();
+            gerente.Show();
+            this.Hide();
+
+        }
+
+        private void folhaDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolhaPagamentoForm folha = new FolhaPagamentoForm();
+            folha.Show();
+            this.Hide();
+        }
+
+        private void admitirFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdmitirFuncionario add = new AdmitirFuncionario();
+            add.Show();
+            this.Hide();
         }
     }
 }

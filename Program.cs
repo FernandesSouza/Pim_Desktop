@@ -23,7 +23,7 @@ namespace SagitarioRHDesktop
 
            
             CalculoINSS calculoINSS = new CalculoINSS();
-            calculoINSS.CalculoInSS(funcionarioModel, iNSSModel, eventosModel);
+            calculoINSS.CalculoInSS(funcionarioModel);
 
 
 

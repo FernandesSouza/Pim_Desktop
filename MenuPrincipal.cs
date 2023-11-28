@@ -49,11 +49,29 @@ namespace SagitarioRHDesktop
 
         private void admitirFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                AdmitirFuncionario admitirFuncionario = new AdmitirFuncionario();
+            AdmitirFuncionario admitirFuncionario = new AdmitirFuncionario();
 
-                admitirFuncionario.Show();
-                this.Hide();
-            
+            admitirFuncionario.Show();
+            this.Hide();
+
+        }
+
+        private void cadastroDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadastroGerenteEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroGerenteEmpresasForm gerente = new CadastroGerenteEmpresasForm();
+
+            gerente.Show();
+            this.Hide();
+        }
+
+        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

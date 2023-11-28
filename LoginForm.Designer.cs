@@ -30,7 +30,6 @@
         {
             groupBox1 = new GroupBox();
             btnLogin = new Button();
-            linkLabel2 = new LinkLabel();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -43,7 +42,6 @@
             // 
             groupBox1.BackColor = SystemColors.ButtonFace;
             groupBox1.Controls.Add(btnLogin);
-            groupBox1.Controls.Add(linkLabel2);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label6);
@@ -64,16 +62,6 @@
             btnLogin.Text = "Acessar";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
-            // 
-            // linkLabel2
-            // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(80, 267);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(100, 15);
-            linkLabel2.TabIndex = 14;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Esqueceu a senha";
             // 
             // label4
             // 
@@ -136,7 +124,6 @@
 
         private GroupBox groupBox1;
         private Button btnLogin;
-        private LinkLabel linkLabel2;
         private Label label4;
         private Label label5;
         private Label label6;

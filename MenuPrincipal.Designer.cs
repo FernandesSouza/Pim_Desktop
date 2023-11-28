@@ -34,10 +34,8 @@
             selecionarEmpresaToolStripMenuItem = new ToolStripMenuItem();
             funcionáriosToolStripMenuItem = new ToolStripMenuItem();
             admitirFuncionárioToolStripMenuItem = new ToolStripMenuItem();
-            alterarFuncionárioToolStripMenuItem = new ToolStripMenuItem();
-            excluirFuncionárioToolStripMenuItem = new ToolStripMenuItem();
             folhaDePagamentoToolStripMenuItem = new ToolStripMenuItem();
-            cadastroDeUsuáriosToolStripMenuItem = new ToolStripMenuItem();
+            cadastroGerenteEmpresasToolStripMenuItem = new ToolStripMenuItem();
             encerrarToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -45,7 +43,7 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.AppWorkspace;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroEmpresaToolStripMenuItem, funcionáriosToolStripMenuItem, folhaDePagamentoToolStripMenuItem, cadastroDeUsuáriosToolStripMenuItem, encerrarToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroEmpresaToolStripMenuItem, funcionáriosToolStripMenuItem, folhaDePagamentoToolStripMenuItem, cadastroGerenteEmpresasToolStripMenuItem, encerrarToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -75,10 +73,11 @@
             // 
             // funcionáriosToolStripMenuItem
             // 
-            funcionáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { admitirFuncionárioToolStripMenuItem, alterarFuncionárioToolStripMenuItem, excluirFuncionárioToolStripMenuItem });
+            funcionáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { admitirFuncionárioToolStripMenuItem });
             funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
             funcionáriosToolStripMenuItem.Size = new Size(87, 20);
             funcionáriosToolStripMenuItem.Text = "Funcionários";
+            funcionáriosToolStripMenuItem.Click += funcionáriosToolStripMenuItem_Click;
             // 
             // admitirFuncionárioToolStripMenuItem
             // 
@@ -87,18 +86,6 @@
             admitirFuncionárioToolStripMenuItem.Text = "Admitir funcionário";
             admitirFuncionárioToolStripMenuItem.Click += admitirFuncionárioToolStripMenuItem_Click;
             // 
-            // alterarFuncionárioToolStripMenuItem
-            // 
-            alterarFuncionárioToolStripMenuItem.Name = "alterarFuncionárioToolStripMenuItem";
-            alterarFuncionárioToolStripMenuItem.Size = new Size(180, 22);
-            alterarFuncionárioToolStripMenuItem.Text = "Editar funcionário";
-            // 
-            // excluirFuncionárioToolStripMenuItem
-            // 
-            excluirFuncionárioToolStripMenuItem.Name = "excluirFuncionárioToolStripMenuItem";
-            excluirFuncionárioToolStripMenuItem.Size = new Size(180, 22);
-            excluirFuncionárioToolStripMenuItem.Text = "Excluir funcionário";
-            // 
             // folhaDePagamentoToolStripMenuItem
             // 
             folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
@@ -106,11 +93,12 @@
             folhaDePagamentoToolStripMenuItem.Text = "Folha de Pagamento";
             folhaDePagamentoToolStripMenuItem.Click += folhaDePagamentoToolStripMenuItem_Click;
             // 
-            // cadastroDeUsuáriosToolStripMenuItem
+            // cadastroGerenteEmpresasToolStripMenuItem
             // 
-            cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
-            cadastroDeUsuáriosToolStripMenuItem.Size = new Size(130, 20);
-            cadastroDeUsuáriosToolStripMenuItem.Text = "Cadastro de Usuários";
+            cadastroGerenteEmpresasToolStripMenuItem.Name = "cadastroGerenteEmpresasToolStripMenuItem";
+            cadastroGerenteEmpresasToolStripMenuItem.Size = new Size(163, 20);
+            cadastroGerenteEmpresasToolStripMenuItem.Text = "Cadastro Gerente Empresas";
+            cadastroGerenteEmpresasToolStripMenuItem.Click += cadastroGerenteEmpresasToolStripMenuItem_Click;
             // 
             // encerrarToolStripMenuItem
             // 
@@ -141,12 +129,10 @@
         private ToolStripMenuItem cadastroEmpresaToolStripMenuItem;
         private ToolStripMenuItem funcionáriosToolStripMenuItem;
         private ToolStripMenuItem admitirFuncionárioToolStripMenuItem;
-        private ToolStripMenuItem alterarFuncionárioToolStripMenuItem;
-        private ToolStripMenuItem excluirFuncionárioToolStripMenuItem;
         private ToolStripMenuItem folhaDePagamentoToolStripMenuItem;
-        private ToolStripMenuItem cadastroDeUsuáriosToolStripMenuItem;
         private ToolStripMenuItem encerrarToolStripMenuItem;
         private ToolStripMenuItem cadastroEmpresaToolStripMenuItem1;
         private ToolStripMenuItem selecionarEmpresaToolStripMenuItem;
+        private ToolStripMenuItem cadastroGerenteEmpresasToolStripMenuItem;
     }
 }

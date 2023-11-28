@@ -24,6 +24,7 @@ namespace SagitarioRHDesktop.Data
         public DbSet<FolhaPgtoModel> folhaPgto { get; set; }
         public DbSet<ImpostoRendaModel> cadImpRenda { get; set; }
         public DbSet<ImpostoINSSModel> cadINSS { get; set; }
+        public DbSet<GerenteModel> gerente { get; set; }
 
     }
 }

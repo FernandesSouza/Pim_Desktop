@@ -74,5 +74,28 @@ namespace SagitarioRHDesktop
         {
             Application.Exit();
         }
+
+        private void cadastroDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroGerenteEmpresasForm gerente = new CadastroGerenteEmpresasForm();
+            gerente.Show();
+            this.Hide();
+        }
+
+        private void admitirFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdmitirFuncionario admitirFuncionario = new AdmitirFuncionario();
+
+            admitirFuncionario.Show();
+            this.Hide();
+        }
+
+        private void folhaDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolhaPagamentoForm folhaPagamento = new FolhaPagamentoForm();
+
+            folhaPagamento.Show();
+            this.Hide();
+        }
     }
 }

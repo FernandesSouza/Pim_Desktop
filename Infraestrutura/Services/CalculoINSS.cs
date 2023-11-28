@@ -17,7 +17,7 @@ namespace SagitarioRHDesktop.Infraestrutura.Services
     {
 
 
-        public void CalculoInSS(FuncionarioModel funcionarioModel, ImpostoINSSModel iNSSModel, EventosModel eventosModel)
+        public void CalculoInSS(FuncionarioModel funcionarioModel)
         {
 
             decimal aliquota1 = 0.08m;
@@ -74,14 +74,14 @@ namespace SagitarioRHDesktop.Infraestrutura.Services
                         folhaPagamento.valor = item.salario - SalarioINSS;
                         folhaPagamento.matfuncionario = item.matricula;
                         folhaPagamento.idempresa = item.idempresa;
-                        folhaPagamento.codevento = eventosModel.codevento;
+                        folhaPagamento.cpf = item.cpf;
                         folhaPagamento.datapgto = DateTime.Now;
                         folhaPagamento.setor = item.setor;
                         context.folhaPgto.Add(folhaPagamento);
 
                     }
                 }
-
+                
                 context.SaveChanges();
 
 

@@ -59,7 +59,7 @@ namespace SagitarioRHDesktop
                 }
                 else
                 {
-                    MessageBox.Show("Falta alguma informação a ser digitada");
+                    MessageBox.Show("Alguma informação foi digitada incorretamente");
 
                 }
 
@@ -79,6 +79,46 @@ namespace SagitarioRHDesktop
             // usa a instancia do MenuPrincipal para abrir a tela de MenuPrincipal
             menuPrincipal.Show();
             // esconde a tela
+            this.Hide();
+        }
+
+        private void cadastroDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroGerenteEmpresasForm gerente = new CadastroGerenteEmpresasForm();
+            gerente.Show();
+            this.Hide();
+        }
+
+        private void cadastroEmpresaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CadastroEmpresa empresa = new CadastroEmpresa();
+            empresa.Show();
+            this.Hide();
+
+        }
+
+        private void selecionarEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PesquisarEmpresa pesquisarEmpresa = new PesquisarEmpresa();
+
+            pesquisarEmpresa.Show();
+            this.Hide();
+        }
+
+        private void admitirFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            AdmitirFuncionario admitirFuncionario = new AdmitirFuncionario();
+
+            admitirFuncionario.Show();
+            this.Hide();
+        }
+
+        private void folhaDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolhaPagamentoForm folhaPagamento = new FolhaPagamentoForm();
+
+            folhaPagamento.Show();
             this.Hide();
         }
     }

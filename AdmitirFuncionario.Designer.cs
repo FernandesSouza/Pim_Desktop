@@ -31,7 +31,7 @@
             txt_FuncSenha = new TextBox();
             txt_FuncUsuario = new TextBox();
             btn_LimparInfoFunc = new Button();
-            btn_ProxCadFunc = new Button();
+            btn_CadFunc = new Button();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             radioButton1 = new RadioButton();
@@ -97,8 +97,6 @@
             selecionarEmpresaToolStripMenuItem = new ToolStripMenuItem();
             funcionáriosToolStripMenuItem = new ToolStripMenuItem();
             admitirFuncionárioToolStripMenuItem = new ToolStripMenuItem();
-            alterarFuncionárioToolStripMenuItem = new ToolStripMenuItem();
-            excluirFuncionárioToolStripMenuItem = new ToolStripMenuItem();
             folhaDePagamentoToolStripMenuItem = new ToolStripMenuItem();
             cadastroDeUsuáriosToolStripMenuItem = new ToolStripMenuItem();
             encerrarToolStripMenuItem = new ToolStripMenuItem();
@@ -141,7 +139,7 @@
             // 
             // btn_LimparInfoFunc
             // 
-            btn_LimparInfoFunc.Location = new Point(254, 830);
+            btn_LimparInfoFunc.Location = new Point(248, 818);
             btn_LimparInfoFunc.Name = "btn_LimparInfoFunc";
             btn_LimparInfoFunc.Size = new Size(180, 23);
             btn_LimparInfoFunc.TabIndex = 33;
@@ -149,15 +147,15 @@
             btn_LimparInfoFunc.UseVisualStyleBackColor = true;
             btn_LimparInfoFunc.Click += btn_LimparInfoFunc_Click;
             // 
-            // btn_ProxCadFunc
+            // btn_CadFunc
             // 
-            btn_ProxCadFunc.Location = new Point(440, 830);
-            btn_ProxCadFunc.Name = "btn_ProxCadFunc";
-            btn_ProxCadFunc.Size = new Size(180, 23);
-            btn_ProxCadFunc.TabIndex = 32;
-            btn_ProxCadFunc.Text = "Cadastrar Funcionário";
-            btn_ProxCadFunc.UseVisualStyleBackColor = true;
-            btn_ProxCadFunc.Click += btn_ProxCadFunc_Click;
+            btn_CadFunc.Location = new Point(446, 818);
+            btn_CadFunc.Name = "btn_CadFunc";
+            btn_CadFunc.Size = new Size(180, 23);
+            btn_CadFunc.TabIndex = 32;
+            btn_CadFunc.Text = "Cadastrar Funcionário";
+            btn_CadFunc.UseVisualStyleBackColor = true;
+            btn_CadFunc.Click += btn_ProxCadFunc_Click;
             // 
             // groupBox1
             // 
@@ -760,7 +758,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroEmpresaToolStripMenuItem, funcionáriosToolStripMenuItem, folhaDePagamentoToolStripMenuItem, cadastroDeUsuáriosToolStripMenuItem, encerrarToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(892, 24);
+            menuStrip1.Size = new Size(972, 24);
             menuStrip1.TabIndex = 56;
             menuStrip1.Text = "FunPrincipal";
             // 
@@ -776,16 +774,18 @@
             cadastroEmpresaToolStripMenuItem1.Name = "cadastroEmpresaToolStripMenuItem1";
             cadastroEmpresaToolStripMenuItem1.Size = new Size(176, 22);
             cadastroEmpresaToolStripMenuItem1.Text = "Cadastro Empresa";
+            cadastroEmpresaToolStripMenuItem1.Click += cadastroEmpresaToolStripMenuItem1_Click;
             // 
             // selecionarEmpresaToolStripMenuItem
             // 
             selecionarEmpresaToolStripMenuItem.Name = "selecionarEmpresaToolStripMenuItem";
             selecionarEmpresaToolStripMenuItem.Size = new Size(176, 22);
             selecionarEmpresaToolStripMenuItem.Text = "Selecionar Empresa";
+            selecionarEmpresaToolStripMenuItem.Click += selecionarEmpresaToolStripMenuItem_Click;
             // 
             // funcionáriosToolStripMenuItem
             // 
-            funcionáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { admitirFuncionárioToolStripMenuItem, alterarFuncionárioToolStripMenuItem, excluirFuncionárioToolStripMenuItem });
+            funcionáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { admitirFuncionárioToolStripMenuItem });
             funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
             funcionáriosToolStripMenuItem.Size = new Size(87, 20);
             funcionáriosToolStripMenuItem.Text = "Funcionários";
@@ -793,38 +793,30 @@
             // admitirFuncionárioToolStripMenuItem
             // 
             admitirFuncionárioToolStripMenuItem.Name = "admitirFuncionárioToolStripMenuItem";
-            admitirFuncionárioToolStripMenuItem.Size = new Size(178, 22);
+            admitirFuncionárioToolStripMenuItem.Size = new Size(180, 22);
             admitirFuncionárioToolStripMenuItem.Text = "Admitir funcionário";
-            // 
-            // alterarFuncionárioToolStripMenuItem
-            // 
-            alterarFuncionárioToolStripMenuItem.Name = "alterarFuncionárioToolStripMenuItem";
-            alterarFuncionárioToolStripMenuItem.Size = new Size(178, 22);
-            alterarFuncionárioToolStripMenuItem.Text = "Editar funcionário";
-            // 
-            // excluirFuncionárioToolStripMenuItem
-            // 
-            excluirFuncionárioToolStripMenuItem.Name = "excluirFuncionárioToolStripMenuItem";
-            excluirFuncionárioToolStripMenuItem.Size = new Size(178, 22);
-            excluirFuncionárioToolStripMenuItem.Text = "Excluir funcionário";
+            admitirFuncionárioToolStripMenuItem.Click += admitirFuncionárioToolStripMenuItem_Click;
             // 
             // folhaDePagamentoToolStripMenuItem
             // 
             folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
             folhaDePagamentoToolStripMenuItem.Size = new Size(128, 20);
             folhaDePagamentoToolStripMenuItem.Text = "Folha de Pagamento";
+            folhaDePagamentoToolStripMenuItem.Click += folhaDePagamentoToolStripMenuItem_Click;
             // 
             // cadastroDeUsuáriosToolStripMenuItem
             // 
             cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
-            cadastroDeUsuáriosToolStripMenuItem.Size = new Size(130, 20);
-            cadastroDeUsuáriosToolStripMenuItem.Text = "Cadastro de Usuários";
+            cadastroDeUsuáriosToolStripMenuItem.Size = new Size(126, 20);
+            cadastroDeUsuáriosToolStripMenuItem.Text = "Cadastro de Gerente";
+            cadastroDeUsuáriosToolStripMenuItem.Click += cadastroDeUsuáriosToolStripMenuItem_Click;
             // 
             // encerrarToolStripMenuItem
             // 
             encerrarToolStripMenuItem.Name = "encerrarToolStripMenuItem";
             encerrarToolStripMenuItem.Size = new Size(62, 20);
             encerrarToolStripMenuItem.Text = "Encerrar";
+            encerrarToolStripMenuItem.Click += encerrarToolStripMenuItem_Click;
             // 
             // groupBox3
             // 
@@ -870,12 +862,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(892, 881);
+            AutoScroll = true;
+            ClientSize = new Size(989, 623);
             Controls.Add(label5);
             Controls.Add(groupBox3);
             Controls.Add(menuStrip1);
             Controls.Add(btn_LimparInfoFunc);
-            Controls.Add(btn_ProxCadFunc);
+            Controls.Add(btn_CadFunc);
             Controls.Add(groupBox1);
             Controls.Add(gp_InfoRemunFunc);
             Controls.Add(gp_InfoCargoFunc);
@@ -883,6 +876,7 @@
             Controls.Add(gp_InfoPessoaisFunc);
             Name = "AdmitirFuncionario";
             Text = "AdmitirFuncionario";
+            Load += AdmitirFuncionario_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -920,7 +914,7 @@
         private TextBox txt_FuncSenha;
         private TextBox txt_FuncUsuario;
         private Button btn_LimparInfoFunc;
-        private Button btn_ProxCadFunc;
+        private Button btn_CadFunc;
         private GroupBox groupBox1;
         private Label label3;
         private RadioButton radioButton1;
@@ -979,8 +973,6 @@
         private ToolStripMenuItem selecionarEmpresaToolStripMenuItem;
         private ToolStripMenuItem funcionáriosToolStripMenuItem;
         private ToolStripMenuItem admitirFuncionárioToolStripMenuItem;
-        private ToolStripMenuItem alterarFuncionárioToolStripMenuItem;
-        private ToolStripMenuItem excluirFuncionárioToolStripMenuItem;
         private ToolStripMenuItem folhaDePagamentoToolStripMenuItem;
         private ToolStripMenuItem cadastroDeUsuáriosToolStripMenuItem;
         private ToolStripMenuItem encerrarToolStripMenuItem;

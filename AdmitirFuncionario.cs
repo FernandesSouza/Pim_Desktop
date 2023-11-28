@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Query.ExpressionTranslators.Internal;
+using SagitarioRH.Models;
 using SagitarioRHDesktop.Data;
+using SagitarioRHDesktop.Infraestrutura.Services;
 using SagitarioRHDesktop.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SagitarioRHDesktop
 {
@@ -18,6 +22,7 @@ namespace SagitarioRHDesktop
         public AdmitirFuncionario()
         {
             InitializeComponent();
+
         }
 
         private async void btn_ProxCadFunc_Click(object sender, EventArgs e)
@@ -146,7 +151,6 @@ namespace SagitarioRHDesktop
 
                 funcionarioModel.valerefeicao = vlInputRefeicao;
 
-
             }
             else
             {
@@ -179,12 +183,18 @@ namespace SagitarioRHDesktop
             using (var context = new BancoContext(optionsBuilder.Options))
             {
 
-
                 if (funcionarioModel != null)
                 {
 
-                    var funcionario = context.funcionarios.AddAsync(funcionarioModel);
+                    var funcionario = await context.funcionarios.AddAsync(funcionarioModel);
                     await context.SaveChangesAsync();
+
+                    CalculoINSS calculo = new CalculoINSS();
+                    calculo.CalculoInSS(funcionarioModel);
+
+                    await context.SaveChangesAsync();
+
+
 
                     MessageBox.Show("Cadastro efetuado com sucesso");
 
@@ -195,6 +205,8 @@ namespace SagitarioRHDesktop
                     MessageBox.Show("Digite todas as informações necessárias");
 
                 }
+
+
             }
 
 
@@ -223,6 +235,63 @@ namespace SagitarioRHDesktop
             txt_salarioFunc.Clear();
             txt_jornadaFunc.Clear();
 
+        }
+
+        private void admitirFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdmitirFuncionario admitirFuncionario = new AdmitirFuncionario();
+
+            admitirFuncionario.Show();
+            this.Hide();
+        }
+
+        private void cadastroEmpresaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CadastroGerenteEmpresasForm gerente = new CadastroGerenteEmpresasForm();
+
+            gerente.Show();
+            this.Hide();
+        }
+
+        private void encerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void scrollbar_Scroll(object sender, ScrollEventArgs e)
+        {
+
+
+
+        }
+
+        private void AdmitirFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadastroDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroGerenteEmpresasForm gerente = new CadastroGerenteEmpresasForm();
+            gerente.Show();
+            this.Hide();
+        }
+
+        private void selecionarEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PesquisarEmpresa pesquisarEmpresa = new PesquisarEmpresa();
+
+            pesquisarEmpresa.Show();
+            this.Hide();
+        }
+
+        private void folhaDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FolhaPagamentoForm folhaPagamento = new FolhaPagamentoForm();
+
+            folhaPagamento.Show();
+            this.Hide();
         }
     }
 }

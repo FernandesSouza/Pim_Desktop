@@ -11,6 +11,6 @@ namespace SagitarioRHDesktop.Infraestrutura.Interfaces
     internal interface ICalculoINSS
     {
 
-        public void CalculoInSS(FuncionarioModel funcionarioModel, ImpostoINSSModel iNSSModel,EventosModel eventosModel);
+        public void CalculoInSS(FuncionarioModel funcionarioModel);
     }
 }
